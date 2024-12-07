@@ -1,0 +1,9 @@
+﻿@model DepartmentViewModel
+
+<h1>Department Details</h1>
+<br />
+<br />
+
+<partial name="PartialView/DetailsDeletePartial"></partial>
+<a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary mt-5"> Edit</a>
+<a asp-action="Index" class="btn btn-light mt-5">Back To List</a>

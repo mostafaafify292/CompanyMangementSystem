@@ -1,0 +1,56 @@
+﻿@model SignUpViewModel
+@{
+	ViewData["Title"] = "SignUp";
+    Layout = "~/Views/Shared/_AuthLayout.cshtml";
+}
+
+<div asp-validation-summary="All"></div>
+<div>
+	<form asp-action="SignUp" class="login100-form validate-form p-b-33 p-t-5">
+
+		<div class="wrap-input100 " >
+			<input class="input100" asp-for="FullName" placeholder="Full Name">
+			<span class="focus-input100" data-placeholder="&#xe82a;"></span>
+			<span asp-validation-for="FullName" class="text-danger ml-5 "></span>
+		</div>
+	
+		<div class="wrap-input100">
+			<input class="input100" asp-for="Email" placeholder="Email Address" >
+			<span class="focus-input100 " data-placeholder="&#xe82a;"></span>
+			<span asp-validation-for="Email" class="text-danger ml-5 "></span>
+		</div>
+
+		<div class="wrap-input100 validate-input" data-validate="Enter password">
+			<input class="input100" asp-for="Password" placeholder="Password">
+			<span class="focus-input100" data-placeholder="&#xe80f;"></span>
+			<span asp-validation-for="Password" class="text-danger ml-5 "></span>
+		</div>
+		<div class="wrap-input100 validate-input" data-validate="Enter Confirm Password">
+			<input class="input100" asp-for="ConfirmPassword" placeholder="Confirm Password">
+			<span class="focus-input100" data-placeholder="&#xe80f;"></span>
+			<span asp-validation-for="ConfirmPassword" class="text-danger ml-5 "></span>
+		</div>
+		<div class="wrap-input100 " >
+			<label asp-for="IsAgree" class="input100 checkbox-container">
+				<input asp-for="IsAgree"  class="input-checkbox" required>
+				<span  class="checkmark"></span>
+				I Agree to Terms & Conditions
+				<span asp-validation-for="IsAgree" class="text-danger"></span>
+			</label>
+			
+		</div>
+
+		<div class="container-login100-form-btn m-t-32">
+			<button  class="login100-form-btn">
+				<input class="login100-form-btn"type="submit" value="Create" />
+			</button>
+		</div>
+		
+	</form>
+	<p>Do You Have An Account? <a asp-action="SignIn"> Login Now!</a></p>
+
+</div>
+@section validate {
+	<partial name="_ValidationScriptsPartial"></partial>
+}
+

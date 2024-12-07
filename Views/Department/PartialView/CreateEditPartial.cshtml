@@ -1,0 +1,18 @@
+﻿@model DepartmentViewModel
+
+<div asp-validation-summary="All"></div>
+<div>
+    <label class="col-form-label" asp-for="Code"></label>
+    <input type="text" asp-for="Code" class="form-control" />
+    <span asp-validation-for="Code" class="text-danger"></span>
+</div>
+<div>
+    <label asp-for="Name" class="col-form-label"></label>
+    <input type="text" asp-for="Name" class="form-control" />
+    <span asp-validation-for="Name" class="text-danger"></span>
+</div>
+<div>
+    <label class="col-form-label" asp-for="DateOfCreation"></label>
+    <input asp-for="DateOfCreation" class="form-control" />
+    <span asp-validation-for="DateOfCreation" class="text-danger"></span>
+</div>

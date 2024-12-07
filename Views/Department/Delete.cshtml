@@ -1,0 +1,12 @@
+﻿@model DepartmentViewModel
+
+<h1>Are You Sure You Want To Delete This Department (@Model.Name) !?</h1>
+
+<br />
+<br />
+
+<form asp-action="Delete" >
+    <partial name="PartialView/DetailsDeletePartial"></partial>
+    <input type="submit" value="Delete" class="btn btn-danger mt-5" />
+    <a asp-action="Index" class="btn btn-light mt-5">Cancel</a>
+</form>
